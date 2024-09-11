@@ -1,0 +1,43 @@
+.navbar {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+/* .nav-links {
+  display: inherit;
+  gap: 1rem;
+  font-size: 1rem;
+  align-items: center;
+} */
+
+/* Navbar Button */
+.menu-button {
+  height: 40px;
+  width: 100px;
+  border-radius: 1.5rem;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.btn-slider {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+.btn-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.btn-container:nth-of-type(2) {
+  position: absolute;
+  top: 100%;
+  background-color: var(--primary);
+  color: var(--secondary);
+}
