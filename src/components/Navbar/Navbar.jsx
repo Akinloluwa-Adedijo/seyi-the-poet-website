@@ -30,7 +30,6 @@ const Navbar = () => {
         }}
         className="nav-menu"
       >
-        {/* <div> */}
         <motion.p
           variants={opacityVariants}
           animate={!isActive ? "open" : "closed"}
@@ -43,7 +42,6 @@ const Navbar = () => {
         >
           Close
         </motion.p>
-        {/* </div> */}
       </div>
     </nav>
   );

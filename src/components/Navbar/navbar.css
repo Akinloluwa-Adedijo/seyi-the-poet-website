@@ -1,12 +1,14 @@
 .navbar {
+  position: fixed;
   display: flex;
   justify-content: space-between;
   align-items: center;
   text-transform: uppercase;
+  /* background-color: var(--secondary);
+  color: var(--primary); */
 }
 
 .nav-title {
-  font-size: 1.5rem;
   font-weight: bold;
 }
 
@@ -20,7 +22,6 @@
   align-items: center;
   height: 100%;
   text-transform: uppercase;
-  font-size: 1rem;
 }
 
 .nav-menu:hover {
