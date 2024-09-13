@@ -1,7 +1,8 @@
 import { useState } from "react";
-import "./navbar.css";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { opacity } from "../animationVariants";
+import "./navbar.css";
+import NavBottom from "./NavBottom";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
@@ -25,6 +26,7 @@ const Navbar = () => {
           </motion.p>
         </div>
       </div>
+      <AnimatePresence mode="wait">{isActive && <NavBottom />}</AnimatePresence>
     </div>
   );
 };
