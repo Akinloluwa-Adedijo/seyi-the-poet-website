@@ -1,0 +1,7 @@
+.nav-footer {
+  display: flex;
+  text-transform: uppercase;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-size: 0.75rem;
+}

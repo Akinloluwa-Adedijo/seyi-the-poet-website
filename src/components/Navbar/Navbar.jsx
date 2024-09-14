@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { opacity } from "../animationVariants";
+import { opacity, navBackground } from "../animationVariants";
 import "./navbar.css";
 import NavBottom from "./NavBottom";
 
@@ -27,6 +27,12 @@ const Navbar = () => {
         </div>
       </div>
       <AnimatePresence mode="wait">{isActive && <NavBottom />}</AnimatePresence>
+      <motion.div
+        className="nav-background"
+        variants={navBackground}
+        initial="initial"
+        animate={isActive ? "open" : "closed"}
+      ></motion.div>
     </div>
   );
 };

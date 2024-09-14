@@ -8,8 +8,8 @@ import "./navBottom.css";
 
 const navLinks = [
   { title: "Music", href: "/music", src: "music.jpg" },
-  { title: "Music-Reviews", href: "/music-reviews", src: "music-reviews.jpg" },
-  { title: "Shoots", href: "/shoots", src: "shoots.jpeg" },
+  { title: "Reviews", href: "/music-reviews", src: "music-reviews.jpg" },
+  { title: "Shoots", href: "/shoots", src: "shoots.jpg" },
   { title: "Poems", href: "/poems", src: "poems.jpg" },
   { title: "Contact", href: "/contact", src: "contact.jpg" },
 ];
