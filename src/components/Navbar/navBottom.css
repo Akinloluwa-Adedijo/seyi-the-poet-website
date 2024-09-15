@@ -6,6 +6,7 @@
   display: flex;
   gap: 3.125rem;
   margin-bottom: 5rem;
+  align-items: center;
 }
 
 .container {
