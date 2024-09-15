@@ -1,5 +1,7 @@
+import Transition from "../Transition/Transition";
+
 const Shoots = () => {
   return <div>shoots</div>;
 };
 
-export default Shoots;
+export default Transition(Shoots);

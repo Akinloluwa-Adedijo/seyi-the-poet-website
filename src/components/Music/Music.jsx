@@ -1,5 +1,7 @@
+import Transition from "../Transition/Transition";
+
 const Music = () => {
   return <div>music</div>;
 };
 
-export default Music;
+export default Transition(Music);
