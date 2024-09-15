@@ -75,3 +75,16 @@ export const navBackground = {
     transition,
   },
 };
+
+export const transitionSlide = {
+  initial: {
+    y: "100vh",
+  },
+  enter: {
+    y: "100vh",
+  },
+  exit: {
+    y: 0,
+    transition,
+  },
+};

@@ -4,8 +4,9 @@
   /* line-height: 1.5; */
 
   --primary: #ffd700;
-  --secondary: #000000;
-  --white: #ffffff;
+  --secondary: #1c1c1c;
+  --accent: #36827f;
+  --white: #f0f0f0;
   box-sizing: border-box;
 }
 

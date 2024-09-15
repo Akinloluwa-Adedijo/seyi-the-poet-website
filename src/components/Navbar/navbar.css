@@ -18,6 +18,15 @@
   font-weight: bold;
 }
 
+.nav-title img {
+  /* width: 75px; */
+  height: 75px;
+}
+
+/* .nav-title img:hover {
+  transform: rotate(360deg);
+} */
+
 .nav-title p,
 .nav-menu-btn p {
   margin: 0;
@@ -41,7 +50,7 @@
 
 .nav-background {
   position: absolute;
-  background-color: white;
+  background-color: var(--white);
   /* opacity: 0.5; */
   height: 100%;
   width: 100%;
