@@ -7,6 +7,7 @@ import { height } from "../animationVariants";
 import "./navBottom.css";
 
 const navLinks = [
+  { title: "Home", href: "/", src: "home.jpg" },
   { title: "Music", href: "/music", src: "music.jpg" },
   { title: "Reviews", href: "/music-reviews", src: "music-reviews.jpg" },
   { title: "Shoots", href: "/shoots", src: "shoots.jpg" },
