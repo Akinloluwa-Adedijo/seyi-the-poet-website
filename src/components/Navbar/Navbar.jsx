@@ -6,6 +6,7 @@ import NavBottom from "./NavBottom";
 
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
+
   return (
     <div className="nav-header">
       <div className="bar">
@@ -34,7 +35,11 @@ const Navbar = () => {
           </motion.p>
         </div>
       </div>
-      <AnimatePresence mode="wait">{isActive && <NavBottom />}</AnimatePresence>
+      <AnimatePresence mode="wait">
+        {isActive && (
+          <NavBottom isNavActive={isActive} setNavActive={setIsActive} />
+        )}
+      </AnimatePresence>
       <motion.div
         className="nav-background"
         variants={navBackground}

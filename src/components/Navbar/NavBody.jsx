@@ -3,7 +3,16 @@ import { Link } from "react-router-dom";
 import "./navBody.css";
 import { blur, translate } from "../animationVariants";
 
-const NavBody = ({ links, selectedLink, setSelectedLink }) => {
+const NavBody = ({
+  links,
+  selectedLink,
+  setSelectedLink,
+  _isNavActive,
+  _setNavActive,
+}) => {
+  // console.log(_isNavActive);
+
+  const toggle = () => _setNavActive(!_isNavActive);
   const getChars = (word) => {
     let chars = [];
     word.split("").forEach((char, i) => {
@@ -35,6 +44,7 @@ const NavBody = ({ links, selectedLink, setSelectedLink }) => {
               onMouseLeave={() => {
                 setSelectedLink({ isActive: false, index });
               }}
+              onClick={toggle}
               variants={blur}
               animate={
                 selectedLink.isActive && selectedLink.index != index

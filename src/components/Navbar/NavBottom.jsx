@@ -14,11 +14,12 @@ const navLinks = [
   { title: "Poems", href: "/poems", src: "poems.jpg" },
   { title: "Contact", href: "/contact", src: "contact.jpg" },
 ];
-const NavBottom = () => {
+const NavBottom = ({ isNavActive, setNavActive }) => {
   const [selectedLink, setSelectedLink] = useState({
     isActive: false,
     index: 0,
   });
+
   return (
     <motion.div
       className="navBottom"
@@ -33,6 +34,8 @@ const NavBottom = () => {
             links={navLinks}
             selectedLink={selectedLink}
             setSelectedLink={setSelectedLink}
+            _isNavActive={isNavActive}
+            _setNavActive={setNavActive}
           />
           <NavFooter />
         </div>
