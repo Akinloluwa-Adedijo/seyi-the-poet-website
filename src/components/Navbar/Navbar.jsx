@@ -40,12 +40,12 @@ const Navbar = () => {
           <NavBottom isNavActive={isActive} setNavActive={setIsActive} />
         )}
       </AnimatePresence>
-      <motion.div
+      {/* <motion.div
         className="nav-background"
         variants={navBackground}
         initial="initial"
         animate={isActive ? "open" : "closed"}
-      ></motion.div>
+      ></motion.div> */}
     </div>
   );
 };

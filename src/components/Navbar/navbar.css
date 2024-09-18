@@ -1,10 +1,11 @@
 .nav-header {
   background-color: var(--secondary);
   color: var(--primary);
-  position: fixed;
+  /* position: fixed; */
   padding: 0.625rem;
   width: 100%;
   box-sizing: border-box;
+  z-index: 10;
 }
 .bar {
   display: flex;
@@ -19,13 +20,8 @@
 }
 
 .nav-title img {
-  /* width: 75px; */
   height: 40px;
 }
-
-/* .nav-title img:hover {
-  transform: rotate(360deg);
-} */
 
 .nav-title p,
 .nav-menu-btn p {
@@ -51,7 +47,6 @@
 .nav-background {
   position: absolute;
   background-color: var(--white);
-  /* opacity: 0.5; */
   height: 100%;
   width: 100%;
   left: 0;
