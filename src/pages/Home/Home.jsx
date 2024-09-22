@@ -2,8 +2,9 @@ import { motion, useInView } from "framer-motion";
 import "./home.css";
 import { useRef } from "react";
 
-import Transition from "../Transition/Transition";
-import { slideUp, opacity } from "../animationVariants";
+import Transition from "../../components/Transition/Transition";
+import Publications from "../../components/Publications/Publications";
+import { slideUp, opacity } from "../../components/animationVariants";
 
 const Home = () => {
   const aboutText1 = useRef(null);
@@ -38,7 +39,7 @@ const Home = () => {
             <p>
               {about1.split(" ").map((word, index) => {
                 return (
-                  <span className="mask">
+                  <span className="mask" key={index}>
                     <motion.span
                       variants={slideUp}
                       custom={index}
@@ -90,6 +91,9 @@ const Home = () => {
           </div>
         </div>
       </div>
+      <>
+        <Publications />
+      </>
     </div>
   );
 };

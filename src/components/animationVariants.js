@@ -102,3 +102,5 @@ export const slideUp = {
     transition: { duration: 0.5 },
   },
 };
+
+export const mountAnim = { initial: "initial", animate: "enter", exit: "exit" };
