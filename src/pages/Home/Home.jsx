@@ -68,16 +68,29 @@ const About = () => {
   );
 };
 
+const landingVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
 const Home = () => {
   return (
     <div className="home">
       <div className="landing-page">
-        <motion.div className="landing-image">
+        <motion.div
+          variants={landingVariants}
+          animate="visible"
+          initial="hidden"
+          className="landing-image"
+        >
           <img src="/src/assets/home.webp" alt="landing image" />
+          <motion.div className="landing-text">
+            <p>Sèyí,ThePoet</p>
+          </motion.div>
         </motion.div>
-        <div className="landing-text">
-          <p>Sèyí,ThePoet</p>
-        </div>
       </div>
       <About />
     </div>
