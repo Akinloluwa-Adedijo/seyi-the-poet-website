@@ -1,20 +1,41 @@
-import {
-  motion,
-  useInView,
-  useMotionTemplate,
-  useMotionValue,
-  useScroll,
-  useTransform,
-  useAnimationFrame,
-  useVelocity,
-  useSpring,
-} from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import "./home.css";
 import { useRef } from "react";
 
 import Transition from "../../components/Transition/Transition";
 import Publications from "../../components/Publications/Publications";
-import { slideUp, opacity } from "../../components/animationVariants";
+import { slideUp } from "../../components/animationVariants";
+
+const landingVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+  exit: {
+    opacity: 0,
+    y: 0,
+    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+const landingTextVariants = {
+  hidden: { opacity: 0, x: 200 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { delay: 1, duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+const landingTitleVariants = {
+  hidden: { opacity: 0, x: 200 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
 
 const ParagraphText = ({ data }) => {
   const aboutText = useRef(null);
@@ -54,9 +75,14 @@ const About = () => {
 
   return (
     <>
-      <div className="about-me">
+      <div className="about-me" ref={aboutText1}>
         <div className="title">
-          <motion.h2 variants={opacity}>ABOUT ME</motion.h2>
+          <motion.h2
+            variants={landingTitleVariants}
+            animate={isInView1 ? "visible" : "hidden"}
+          >
+            ABOUT ME
+          </motion.h2>
         </div>
         <div className="body">
           <ParagraphText data={about1} />
@@ -68,14 +94,6 @@ const About = () => {
   );
 };
 
-const landingVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
-  },
-};
 const Home = () => {
   return (
     <div className="home">
@@ -84,17 +102,25 @@ const Home = () => {
           variants={landingVariants}
           animate="visible"
           initial="hidden"
+          exit={"exit"}
           className="landing-image"
         >
           <img src="/src/assets/home.webp" alt="landing image" />
-          <motion.div className="landing-text">
+          <motion.div
+            className="landing-text"
+            variants={landingTextVariants}
+            animate="visible"
+            initial="hidden"
+          >
             <p>Sèyí,ThePoet</p>
+            <p>Artist</p>
           </motion.div>
         </motion.div>
       </div>
       <About />
+      <Publications />
     </div>
   );
 };
 
-export default Home;
+export default Transition(Home);

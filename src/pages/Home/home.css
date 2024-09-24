@@ -13,7 +13,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding-top: 100px;
 }
 
 .landing-image {
@@ -37,13 +36,21 @@
 }
 .landing-text {
   position: absolute;
-  top: 15%;
+  bottom: 10px;
+  left: 10px;
+  right: 10px;
+  text-align: left;
 }
 .landing-text p {
   margin: 0;
-  font-size: 5rem;
+  font-size: 4.5rem;
   font-weight: 900;
   color: var(--white);
+}
+
+.landing-text p:nth-of-type(2) {
+  font-size: 2.5rem;
+  font-weight: 400;
 }
 
 .about-me {
@@ -54,14 +61,15 @@
 }
 
 .title h2 {
-  font-size: 3rem;
-  font-weight: bold;
+  font-size: 5rem;
+  font-weight: 900;
 }
 .body {
   display: flex;
   flex-direction: column;
-  gap: 6.25rem;
+  gap: 5rem;
   position: relative;
+  max-width: 1200px;
 }
 
 .body p {
@@ -98,5 +106,13 @@
   .landing-image {
     width: 320px;
     height: 500px;
+  }
+
+  .landing-text p {
+    font-size: 3rem;
+  }
+
+  .landing-text p:nth-of-type(2) {
+    font-size: 1.5rem;
   }
 }
