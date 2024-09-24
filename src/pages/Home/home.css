@@ -58,6 +58,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 }
 
 .title h2 {
@@ -114,5 +115,9 @@
 
   .landing-text p:nth-of-type(2) {
     font-size: 1.5rem;
+  }
+
+  .title h2 {
+    font-size: 2.5rem;
   }
 }
