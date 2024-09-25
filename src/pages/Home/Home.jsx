@@ -99,6 +99,14 @@ const Home = () => {
     <div className="home">
       <div className="landing-page">
         <motion.div
+          className="landing-text"
+          variants={landingTextVariants}
+          animate="visible"
+          initial="hidden"
+        >
+          <h1>Sèyí,ThePoet</h1>
+        </motion.div>
+        <motion.div
           variants={landingVariants}
           animate="visible"
           initial="hidden"
@@ -106,15 +114,6 @@ const Home = () => {
           className="landing-image"
         >
           <img src="/src/assets/home.webp" alt="landing image" />
-          <motion.div
-            className="landing-text"
-            variants={landingTextVariants}
-            animate="visible"
-            initial="hidden"
-          >
-            <p>Sèyí,ThePoet</p>
-            <p>Artist</p>
-          </motion.div>
         </motion.div>
       </div>
       <About />

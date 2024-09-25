@@ -2,31 +2,29 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 100px;
+  gap: 20rem;
   overflow: visible;
-  padding: 0 2rem 2rem 2rem;
+  padding: 0 1rem 1rem 1rem;
+  overflow: hidden;
 }
 
 .landing-page {
   height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .landing-image {
   height: 80vh;
-  position: relative;
   max-height: 90vh;
   margin: 1.25rem;
   background: var(--white);
-  overflow: hidden;
   aspect-ratio: 2/3;
 }
 
 .landing-image img {
-  position: absolute;
   top: 0;
   left: 0;
   right: 0;
@@ -35,17 +33,14 @@
   height: 100%;
 }
 .landing-text {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  right: 10px;
-  text-align: left;
+  text-transform: uppercase;
 }
-.landing-text p {
+
+.landing-text h1 {
   margin: 0;
-  font-size: 4.5rem;
+  font-size: calc(12.74vw - 17px);
   font-weight: 900;
-  color: var(--white);
+  color: var(--secondary);
 }
 
 .landing-text p:nth-of-type(2) {
@@ -58,7 +53,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .title h2 {
@@ -94,14 +88,19 @@
 }
 
 @media screen and (max-width: 600px) {
-  .landing-container p:nth-of-type(1) {
-    font-size: 3rem;
-  }
-  .landing-container p:nth-of-type(2) {
-    font-size: 2rem;
-  }
   .body p {
     font-size: 1.25rem;
+  }
+
+  .landing-page {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .landing-text h1 {
+    margin: 0;
+    font-size: 3rem;
   }
 
   .landing-image {
@@ -109,15 +108,13 @@
     height: 500px;
   }
 
-  .landing-text p {
-    font-size: 3rem;
-  }
-
-  .landing-text p:nth-of-type(2) {
-    font-size: 1.5rem;
-  }
-
   .title h2 {
     font-size: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .landing-page {
+    margin-top: 75px;
   }
 }

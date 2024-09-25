@@ -1,6 +1,5 @@
 .publication-container {
-  /* height: 100vh; */
-  margin-top: 100px;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -9,6 +8,7 @@
 
 .publication-gallery {
   width: 70%;
+  max-width: 1200px;
 }
 .publication-gallery h2 {
   font-size: 5rem;
@@ -60,7 +60,7 @@
 
 @media screen and (max-width: 600px) {
   .publication p {
-    font-size: 2rem;
+    font-size: 1.5rem;
   }
   .publication-gallery {
     width: 100%;
