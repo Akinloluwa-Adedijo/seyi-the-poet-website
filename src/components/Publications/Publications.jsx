@@ -47,8 +47,18 @@ const landingTitleVariants = {
   },
 };
 
+const lineVariants = {
+  hidden: { width: "0%", borderTop: "2px solid var(--secondary)" },
+  visible: {
+    width: "100%",
+    borderTop: "2px solid var(--secondary)",
+    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
 const Publication = ({ data }) => {
   const [isActive, setIsActive] = useState(false);
+  const pubRef = useRef();
+  const pubInView = useInView(pubRef);
 
   const { title1, title2, link, src } = data;
   return (
@@ -60,16 +70,27 @@ const Publication = ({ data }) => {
       onMouseLeave={() => {
         setIsActive(false);
       }}
+      ref={pubRef}
     >
-      <p>{title1}</p>
-      <motion.div
-        variants={publicationVariants}
-        animate={isActive ? "open" : "closed"}
-        className="publication-image-container"
-      >
-        <img src={src} alt="Publication Card Image" />
-      </motion.div>
-      <p>{title2}</p>
+      <a href={link} target="_blank">
+        <motion.div
+          style={{ borderTop: "2px solid var(--secondary)" }}
+          className="line"
+          variants={lineVariants}
+          animate={pubInView ? "visible" : "hidden"}
+        ></motion.div>
+        <div className="pub">
+          <p>{title1}</p>
+          <motion.div
+            variants={publicationVariants}
+            animate={isActive ? "open" : "closed"}
+            className="publication-image-container"
+          >
+            <img src={src} alt="Publication Card Image" />
+          </motion.div>
+          <p>{title2}</p>
+        </div>
+      </a>
     </div>
   );
 };
@@ -79,12 +100,15 @@ const Publications = () => {
   return (
     <div className="publication-container">
       <div className="publication-gallery" ref={tRef}>
-        <motion.h2
-          variants={landingTitleVariants}
-          animate={inView ? "visible" : "hidden"}
-        >
-          Publications
-        </motion.h2>
+        <div className="publication-heading">
+          <motion.h2
+            variants={landingTitleVariants}
+            animate={inView ? "visible" : "hidden"}
+          >
+            Publications
+          </motion.h2>
+        </div>
+
         {publications.map((data, index) => {
           return <Publication data={data} key={index} />;
         })}

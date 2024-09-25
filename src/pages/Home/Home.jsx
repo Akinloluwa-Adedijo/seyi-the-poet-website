@@ -76,7 +76,7 @@ const About = () => {
   return (
     <>
       <div className="about-me" ref={aboutText1}>
-        <div className="title">
+        <div className="about-title">
           <motion.h2
             variants={landingTitleVariants}
             animate={isInView1 ? "visible" : "hidden"}
@@ -84,7 +84,7 @@ const About = () => {
             ABOUT ME
           </motion.h2>
         </div>
-        <div className="body">
+        <div className="about-body">
           <ParagraphText data={about1} />
           <ParagraphText data={about2} />
           <ParagraphText data={about3} />
