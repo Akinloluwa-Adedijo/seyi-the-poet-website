@@ -1,8 +1,8 @@
 .publication-container {
-  /* height: 100vh; */
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 200px;
 }
 
 .publication-gallery {
@@ -13,7 +13,7 @@
 }
 
 .publication-heading {
-  align-self: flex-end;
+  align-self: start;
 }
 .publication-heading h2 {
   margin: 0;

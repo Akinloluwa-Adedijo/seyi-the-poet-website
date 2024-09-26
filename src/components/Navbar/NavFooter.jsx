@@ -20,7 +20,7 @@ const NavFooter = () => {
         exit="exit"
         custom={[0.3, 0]}
       >
-        2024
+        ©2024
       </motion.div>
     </div>
   );
