@@ -7,7 +7,7 @@ import {
 import "./App.css";
 import Home from "./pages/Home/Home";
 import Contact from "./components/Contact/Contact";
-import Music from "./components/Music/Music";
+import Music from "./pages/Music/Music";
 import MusicReviews from "./components/Music-Reviews/MusicReviews";
 import Poems from "./components/Poems/Poems";
 import Shoots from "./components/Shoots/Shoots";

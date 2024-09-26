@@ -1,0 +1,46 @@
+.music-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.music-content {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  padding: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10rem;
+}
+
+.song iframe {
+  width: 500px;
+  height: 500px;
+}
+.music-images {
+  height: 50vh;
+  max-height: 90vh;
+  aspect-ratio: 2/3;
+}
+
+.music-images img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .song iframe {
+    width: 320px;
+  }
+
+  .music-images {
+    height: 500px;
+  }
+}

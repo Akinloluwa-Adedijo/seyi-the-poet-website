@@ -21,7 +21,6 @@
 .landing-image {
   height: 85vh;
   max-height: 90vh;
-  background: var(--white);
   aspect-ratio: 2/3;
 }
 
