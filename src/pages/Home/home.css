@@ -2,15 +2,14 @@
 .home {
   display: flex;
   flex-direction: column;
-  gap: 20rem;
-
+  gap: 5rem;
   padding: 1rem;
   overflow: hidden;
 }
 
 /* Landing Page  */
 .landing-page {
-  height: 100vh;
+  height: 120vh;
   display: flex;
   align-items: center;
   justify-content: space-between;

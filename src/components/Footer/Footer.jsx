@@ -11,12 +11,17 @@ const Section1 = () => {
     <div className="section1-container">
       <div className="contact-links">
         <h3>Contact</h3>
-        <motion.a whileHover={linkHover} href="mailto:seyimgmnt@gmail.com">
+        <motion.a
+          whileHover={linkHover}
+          href="mailto:seyimgmnt@gmail.com"
+          target="_blank"
+        >
           Email
         </motion.a>
         <motion.a
           whileHover={linkHover}
-          href="https://www.instagram.com/seyithepoet/"
+          href="https://www.instagram.com/seyithepoet/?hl=en"
+          target="_blank"
         >
           Instagram
         </motion.a>
@@ -26,18 +31,21 @@ const Section1 = () => {
         <motion.a
           whileHover={linkHover}
           href="https://open.spotify.com/artist/1N06xJ9v8d6oDgCUqBSkr7"
+          target="_blank"
         >
           Spotify
         </motion.a>
         <motion.a
           whileHover={linkHover}
           href="https://music.apple.com/ca/artist/%C8%99%C3%A8y%C3%ADthepoet/1765384886"
+          target="_blank"
         >
           Apple Music
         </motion.a>
         <motion.a
           whileHover={linkHover}
           href="https://www.youtube.com/@seyithepoet.mp4"
+          target="_blank"
         >
           Youtube
         </motion.a>
