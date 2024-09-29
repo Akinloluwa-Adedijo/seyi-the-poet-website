@@ -77,7 +77,7 @@ const Footer = () => {
   const ref = useRef();
   const inView = useInView(ref);
   return (
-    <div className="container">
+    <div className="footer-container">
       <div className="footer" ref={ref}>
         <Content view={inView} />
       </div>

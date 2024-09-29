@@ -53,7 +53,7 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 5rem;
+  gap: 1rem;
 }
 
 .about-title h2 {
