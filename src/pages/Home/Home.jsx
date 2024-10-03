@@ -104,8 +104,9 @@ const Home = () => {
           animate="visible"
           initial="hidden"
         >
-          <h1>Sèyí,ThePoet</h1>
+          <img src="/src/assets/title.svg" alt="Sèyí,ThePoet" />
         </motion.div>
+
         <motion.div
           variants={landingVariants}
           animate="visible"
