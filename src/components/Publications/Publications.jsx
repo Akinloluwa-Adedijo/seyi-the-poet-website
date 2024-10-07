@@ -74,7 +74,6 @@ const Publication = ({ data }) => {
     >
       <a href={link} target="_blank">
         <motion.div
-          style={{ borderTop: "2px solid var(--secondary)" }}
           className="line"
           variants={lineVariants}
           animate={pubInView ? "visible" : "hidden"}
