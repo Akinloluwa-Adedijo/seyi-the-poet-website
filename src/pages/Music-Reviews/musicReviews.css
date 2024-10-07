@@ -7,7 +7,6 @@
   align-items: start;
   flex-direction: column;
   padding-top: 100px;
-  /* height: 100vh; */
   margin-bottom: 50rem;
 }
 
@@ -15,7 +14,6 @@
 .review-headings,
 .review {
   width: 100%;
-  overflow: hidden;
 }
 
 .review-title h2,
@@ -28,6 +26,7 @@
   text-transform: uppercase;
   font-size: 5vw;
   font-weight: 900;
+  margin-bottom: 2rem;
 }
 
 .review-headings,
@@ -37,19 +36,30 @@
   justify-content: space-between;
 }
 
-.review {
-  flex-direction: column;
-  gap: 1rem;
-  padding: 0.5rem 0;
-  border-top: 3px solid var(--secondary);
-}
-
 .review-headings p {
   font-size: 1rem;
   text-transform: uppercase;
 }
-.review-sub-headings p {
+
+.review-sub-headings {
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+
+.review-sub-headings p,
+.background p {
   font-size: 1.25rem;
+}
+.review-sub-headings {
+  position: relative;
+  overflow: hidden;
+}
+
+.review {
+  flex-direction: column;
+  border-top: 3px solid var(--secondary);
+  position: relative;
+  overflow: hidden;
+  gap: 3rem;
 }
 
 .review-details {
@@ -62,6 +72,22 @@
 .review-image {
   width: 50%;
   max-width: 500px;
+}
+
+.sub-headings-hover {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: var(--secondary);
+  color: var(--primary);
+}
+
+.review-sub-headings {
+  position: relative;
+  overflow: hidden;
 }
 
 .review-image img {
