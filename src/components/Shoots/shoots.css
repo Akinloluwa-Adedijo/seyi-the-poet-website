@@ -1,0 +1,55 @@
+.shoots-container {
+  padding: 1rem;
+}
+
+.shoots-content {
+  margin-top: 100px;
+  margin-bottom: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20rem;
+}
+
+.shoot-image {
+  width: 75%;
+  width: 50%;
+  margin: 2rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.shoot-mask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  /* background-color: var(--accent); */
+}
+
+.shoot-image img {
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.count-title {
+  position: fixed;
+  bottom: 1rem;
+  left: 10px;
+}
+
+.count-title p {
+  margin: 0;
+  font-size: 5vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
