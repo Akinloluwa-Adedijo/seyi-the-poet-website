@@ -14,6 +14,7 @@ import Shoots from "./components/Shoots/Shoots";
 import Navbar from "./components/Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import MainLayout from "./layouts/MainLayout";
+import ShootImage from "./components/Shoots/ShootImage";
 
 function App() {
   const router = createBrowserRouter(
@@ -25,6 +26,7 @@ function App() {
         <Route path="/music-reviews" element={<MusicReviews />} />
         <Route path="/poems" element={<Poems />} />
         <Route path="/shoots" element={<Shoots />} />
+        <Route path="/shoots/:shootTitle" element={<ShootImage />} />
       </Route>
     )
   );
