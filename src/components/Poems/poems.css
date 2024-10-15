@@ -1,0 +1,59 @@
+.poems-container {
+  padding: 1rem;
+}
+
+.poems-content {
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.poems-title h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.poems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.poem {
+  max-width: 600px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 0.5rem;
+  background-color: var(--secondary);
+  color: var(--primary);
+  padding: 1rem;
+  border-radius: 1rem;
+  text-align: left;
+}
+
+.poem p {
+  margin: 0;
+}
+
+.poem-title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.poem-text {
+  font-size: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.poem-text p {
+  line-height: 2rem;
+}
