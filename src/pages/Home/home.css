@@ -53,17 +53,18 @@
 
 .about-body {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column; */
+  /* flex-wrap: wrap; */
   gap: 3rem;
   position: relative;
-  max-width: 1200px;
+  /* max-width: 1200px; */
 }
 
 .about-body p {
   margin: 0px;
   text-align: left;
   color: var(--secondary);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: 500;
   gap: 8px;
   line-height: 1.3;

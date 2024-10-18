@@ -4,6 +4,7 @@
 
 .poems-content {
   padding-top: 100px;
+  padding-bottom: 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -14,6 +15,7 @@
 .poems-title h2 {
   font-size: 3rem;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .poems {
@@ -21,7 +23,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 3rem;
+  gap: 5rem;
 }
 
 .poem {
@@ -29,8 +31,7 @@
   min-width: 300px;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  gap: 0.5rem;
+  gap: 1rem;
   background-color: var(--secondary);
   color: var(--primary);
   padding: 1rem;
@@ -52,8 +53,4 @@
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-}
-
-.poem-text p {
-  line-height: 2rem;
 }
