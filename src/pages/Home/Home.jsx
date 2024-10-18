@@ -63,7 +63,7 @@ const ParagraphText = ({ data }) => {
   );
 };
 const About = () => {
-  const aboutText1 = useRef(null);
+  const aboutText1 = useRef();
   const isInView1 = useInView(aboutText1);
 
   const about1 =

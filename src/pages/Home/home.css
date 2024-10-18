@@ -11,9 +11,9 @@
 .landing-page {
   height: 120vh;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
   margin-top: 75px;
 }
 
@@ -40,9 +40,9 @@
 /* About Me */
 .about-me {
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 1rem;
+  align-items: start;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 .about-title h2 {
@@ -53,11 +53,16 @@
 
 .about-body {
   display: flex;
-  /* flex-direction: column; */
-  /* flex-wrap: wrap; */
-  gap: 3rem;
+  width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2rem;
   position: relative;
-  /* max-width: 1200px; */
+}
+
+.about-body div {
+  max-width: 350px;
+  min-width: 300px;
 }
 
 .about-body p {
@@ -81,8 +86,11 @@
 }
 
 @media screen and (max-width: 600px) {
+  .about-body {
+    flex-direction: column;
+  }
   .about-body p {
-    font-size: 1.5rem;
+    font-size: 1.15rem;
   }
 
   .landing-page {

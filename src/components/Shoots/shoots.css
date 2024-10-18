@@ -7,10 +7,9 @@
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
 
-  gap: 10rem;
-  /* overflow: hidden; */
+  gap: 5rem;
 }
 
 .shot {

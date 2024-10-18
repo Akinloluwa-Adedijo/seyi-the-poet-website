@@ -1,7 +1,6 @@
-import { useRef } from "react";
 import Transition from "../../components/Transition/Transition";
 import "./music.css";
-import { delay, motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 const musicImages = [
   { src: "/src/assets/music_images/fwut-1.webp" },
   { src: "/src/assets/music_images/fwut-2.webp" },
@@ -31,12 +30,7 @@ const Song = ({ link }) => {
 const Music = () => {
   return (
     <div className="music-container">
-      <motion.div
-        className="music-content"
-        variants={landingVariants}
-        animate="visible"
-        initial="hidden"
-      >
+      <div className="music-content">
         <Song
           link={
             "https://open.spotify.com/embed/track/68Q0kZw1M7tQ2oru8IfpSq?utm_source=generator"
@@ -45,9 +39,20 @@ const Music = () => {
 
         {musicImages.map((img, index) => {
           return (
-            <div key={index} className="music-images">
-              <img key={index} src={img.src} alt="Album promotional work" />
-            </div>
+            <motion.div
+              variants={landingVariants}
+              animate="visible"
+              initial="hidden"
+              key={index}
+              className="music-images"
+            >
+              <motion.img
+                key={index}
+                src={img.src}
+                whileHover={{ scale: 1.05 }}
+                alt="Album promotional work"
+              />
+            </motion.div>
           );
         })}
 
@@ -56,7 +61,7 @@ const Music = () => {
             "https://open.spotify.com/embed/album/3gzRWptuhXr2sKnpxrMEWN?utm_source=generator"
           }
         />
-      </motion.div>
+      </div>
     </div>
   );
 };

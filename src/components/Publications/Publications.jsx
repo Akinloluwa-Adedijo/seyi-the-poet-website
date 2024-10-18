@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import { animate, motion, useInView } from "framer-motion";
+import { motion, useInView } from "framer-motion";
 import "./publications.css";
 
 const publications = [

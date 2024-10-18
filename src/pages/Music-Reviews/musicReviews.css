@@ -4,7 +4,6 @@
 
 .review-content {
   display: flex;
-  align-items: start;
   flex-direction: column;
   padding-top: 100px;
   margin-bottom: 50rem;
@@ -71,7 +70,7 @@
 
 .review-image {
   width: 50%;
-  max-width: 500px;
+  max-width: 300px;
 }
 
 .sub-headings-hover {
@@ -88,6 +87,7 @@
 .review-sub-headings {
   position: relative;
   overflow: hidden;
+  cursor: pointer;
 }
 
 .review-image img {
@@ -105,14 +105,13 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 3.125rem;
+  gap: 2rem;
 }
 
 .review-text p {
   text-align: left;
   font-size: 1.25rem;
   font-weight: 500;
-  line-height: 1.3;
 }
 
 @media screen and (max-width: 600px) {
@@ -125,6 +124,6 @@
 
   .review-text p {
     text-align: left;
-    font-size: 1.25rem;
+    font-size: 1.05rem;
   }
 }
