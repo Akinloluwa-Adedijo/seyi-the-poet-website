@@ -6,43 +6,42 @@ import Transition from "../../components/Transition/Transition";
 import Publications from "../../components/Publications/Publications";
 import { slideUp } from "../../components/animationVariants";
 
-const landingVariants = {
-  hidden: { opacity: 0, y: 50 },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
-  },
-  exit: {
+const homeTitleVariants = {
+  hidden: {
     opacity: 0,
-    y: 0,
-    transition: { delay: 0.5, duration: 1, ease: [0.65, 0, 0.35, 1] },
+    x: -200,
   },
-};
-const landingTextVariants = {
-  hidden: { opacity: 0, x: 200 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { delay: 1, duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 2, ease: [0.65, 0, 0.35, 1] },
   },
 };
 
-const landingTitleVariants = {
-  hidden: { opacity: 0, x: 200 },
+const homeImageVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+const sectionTitleVariants = {
+  hidden: { opacity: 0, x: -200 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
   },
 };
 
 const ParagraphText = ({ data }) => {
-  const aboutText = useRef(null);
-  const isInView = useInView(aboutText);
+  const paragraphRef = useRef(null);
+  const paragraphInView = useInView(paragraphRef);
 
   return (
-    <div ref={aboutText}>
+    <div ref={paragraphRef}>
       <p>
         {data.split(" ").map((word, index) => {
           return (
@@ -50,7 +49,7 @@ const ParagraphText = ({ data }) => {
               <motion.span
                 variants={slideUp}
                 custom={index}
-                animate={isInView ? "open" : "closed"}
+                animate={paragraphInView ? "open" : "closed"}
                 key={index}
               >
                 {word}
@@ -63,8 +62,8 @@ const ParagraphText = ({ data }) => {
   );
 };
 const About = () => {
-  const aboutText1 = useRef();
-  const isInView1 = useInView(aboutText1);
+  const aboutContainerRef = useRef();
+  const aboutInView = useInView(aboutContainerRef);
 
   const about1 =
     "Șèyí,ThePoet is a passionate spoken word artist, model and creative director; who brings raw emotion and profound insight to the stage. His performances, rich with themes of mental health and the human experience, have touched hearts and sparked conversations. Notable highlights of his career include a moving performance at the SFU Black Caucus Graduation, winning second place at the highly regarded Da Luv Jones Slam Competition being featured in Vogue Mexico and Pakistan, GMARO magazine and creative directing ‘STACKED’ -  a new sustainable fashion runway in Vancouver, BC.";
@@ -75,11 +74,11 @@ const About = () => {
 
   return (
     <>
-      <div className="about-me" ref={aboutText1}>
+      <div className="about-me" ref={aboutContainerRef}>
         <div className="about-title">
           <motion.h2
-            variants={landingTitleVariants}
-            animate={isInView1 ? "visible" : "hidden"}
+            variants={sectionTitleVariants}
+            animate={aboutInView ? "visible" : "hidden"}
           >
             ABOUT ME
           </motion.h2>
@@ -100,18 +99,17 @@ const Home = () => {
       <div className="landing-page">
         <motion.div
           className="landing-text"
-          variants={landingTextVariants}
+          variants={homeTitleVariants}
           animate="visible"
           initial="hidden"
         >
-          <img src="/src/assets/title.svg" alt="Sèyí,ThePoet" />
+          <img src="/src/assets/title.svg" alt="Sèyí,ThePoet TITLE TEXT" />
         </motion.div>
 
         <motion.div
-          variants={landingVariants}
+          variants={homeImageVariants}
           animate="visible"
           initial="hidden"
-          exit={"exit"}
           className="landing-image"
         >
           <img src="/src/assets/home.webp" alt="landing image" />

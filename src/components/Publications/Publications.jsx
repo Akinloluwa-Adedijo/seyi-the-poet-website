@@ -33,17 +33,17 @@ const publicationVariants = {
   initial: { width: 0 },
   open: {
     width: "auto",
-    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
   },
   closed: { width: 0 },
 };
 
-const landingTitleVariants = {
-  hidden: { opacity: 0, x: 200 },
+const sectionTitleVariants = {
+  hidden: { opacity: 0, x: -200 },
   visible: {
     opacity: 1,
     x: 0,
-    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
   },
 };
 
@@ -52,7 +52,7 @@ const lineVariants = {
   visible: {
     width: "100%",
     borderTop: "2px solid var(--secondary)",
-    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 2, ease: [0.65, 0, 0.35, 1] },
   },
 };
 const Publication = ({ data }) => {
@@ -94,15 +94,15 @@ const Publication = ({ data }) => {
   );
 };
 const Publications = () => {
-  const tRef = useRef();
-  const inView = useInView(tRef);
+  const pubGalleryRef = useRef();
+  const pubGalleryInView = useInView(pubGalleryRef);
   return (
     <div className="publication-container">
-      <div className="publication-gallery" ref={tRef}>
+      <div className="publication-gallery" ref={pubGalleryRef}>
         <div className="publication-heading">
           <motion.h2
-            variants={landingTitleVariants}
-            animate={inView ? "visible" : "hidden"}
+            variants={sectionTitleVariants}
+            animate={pubGalleryInView ? "visible" : "hidden"}
           >
             Publications
           </motion.h2>
