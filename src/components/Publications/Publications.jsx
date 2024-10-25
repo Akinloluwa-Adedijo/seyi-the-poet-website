@@ -33,7 +33,7 @@ const publicationVariants = {
   initial: { width: 0 },
   open: {
     width: "auto",
-    transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
   },
   closed: { width: 0 },
 };
