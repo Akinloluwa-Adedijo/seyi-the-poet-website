@@ -204,7 +204,7 @@ const shootImages = [
   },
 ];
 
-const backgroundCover = {
+const imageCoverVariants = {
   hidden: { y: 0 },
   visible: {
     y: -1000,
@@ -213,13 +213,13 @@ const backgroundCover = {
 };
 
 const Shoot = ({ img }) => {
-  const ref = useRef(null);
-  const inview = useInView(ref);
+  const shootRef = useRef(null);
+  const shootInView = useInView(shootRef);
 
   return (
     <>
       <Link to={`${img.link_title}`} state={img}>
-        <motion.div ref={ref} className="shot">
+        <motion.div ref={shootRef} className="shot">
           <motion.div>
             <motion.img
               src={img.src}
@@ -229,9 +229,9 @@ const Shoot = ({ img }) => {
             />
 
             <motion.div
-              className="cover-background"
-              animate={inview ? "visible" : "hidden"}
-              variants={backgroundCover}
+              className="image-cover"
+              animate={shootInView ? "visible" : "hidden"}
+              variants={imageCoverVariants}
             ></motion.div>
           </motion.div>
         </motion.div>

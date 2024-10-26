@@ -93,6 +93,72 @@ const About = () => {
   );
 };
 
+const recentsData = [
+  {
+    id: 1,
+    title: "PERFORMANCE AT TALK WITH SOSA: A MENTAL HEALTH CONFERENCE",
+    text: "Performing for this event meant a lot to me as i have also struggled  with mental health issues in the past. I was extremly honoured to play  my piece “I love you,” a tale of two lovers in a toxic cylce, “if my  bottle could talk”, a poem about alcholism, “lost”, a poem about the  troubles finiding yourself in a new enovironment as an international  student.",
+    images: [
+      "/src/assets/recent_images/performance_talk_with_sosa_1.webp",
+      "/src/assets/recent_images/performance_talk_with_sosa_2.webp",
+      "/src/assets/recent_images/performance_talk_with_sosa_3.webp",
+      "/src/assets/recent_images/performance_talk_with_sosa_4.webp",
+    ],
+  },
+  {
+    id: 2,
+    title: "Seyi Synth 5k",
+    text: "Synth made with Max MSP",
+    images: ["/src/assets/recent_images/synth.webp"],
+  },
+  {
+    id: 3,
+    title: "UPCOMING ALBUM: OLUWASEYI, THE PROTAGONIST",
+    text: "",
+    images: [
+      "/src/assets/recent_images/album_1.webp",
+      "/src/assets/recent_images/album_2.webp",
+      "/src/assets/recent_images/album_3.webp",
+      "/src/assets/recent_images/album_4.webp",
+    ],
+  },
+];
+const Recent = ({ r }) => {
+  return (
+    <div className="recent" key={r.id}>
+      <div className="recent-text">
+        <h3>{r.title}</h3>
+        <p>{r.text}</p>
+      </div>
+      <div className="recent-images">
+        {r.images.map((im) => {
+          return <img src={im} alt={r.title} />;
+        })}
+      </div>
+    </div>
+  );
+};
+const Recents = () => {
+  const recentsRef = useRef();
+  const recentInView = useInView(recentsRef);
+
+  return (
+    <div className="recents-container" ref={recentsRef}>
+      <div className="recents-title">
+        <motion.h2
+          variants={sectionTitleVariants}
+          animate={recentInView ? "visible" : "hidden"}
+        >
+          Recents
+        </motion.h2>
+      </div>
+      {recentsData.map((r) => {
+        return <Recent r={r} />;
+      })}
+    </div>
+  );
+};
+
 const Home = () => {
   return (
     <div className="home">
@@ -116,6 +182,7 @@ const Home = () => {
         </motion.div>
       </div>
       <About />
+      <Recents />
       <Publications />
     </div>
   );

@@ -5,22 +5,20 @@ import { Link } from "react-router-dom";
 import "./shootImage.css";
 
 const ShootImage = () => {
-  const { shootTitle } = useParams();
   const location = useLocation();
-  console.log(location.state);
-  const image = location.state;
+  const shootImg = location.state;
 
   return (
     <div
       className="shootImage-container"
-      style={{ backgroundColor: `${image.color}` }}
+      style={{ backgroundColor: `${shootImg.color}` }}
     >
       <div className="shootImage">
-        <Link to="/shoots#top">
+        <Link to="/shoots">
           <p className="shootImage-back">Back</p>
         </Link>
-        <p className="shootImage-title">{image.title}</p>
-        <img src={image.src} alt="" />
+        <p className="shootImage-title">{shootImg.title}</p>
+        <img src={shootImg.src} alt={shootImg.title} />
       </div>
     </div>
   );

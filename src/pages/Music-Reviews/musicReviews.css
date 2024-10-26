@@ -46,7 +46,7 @@
 
 .review-sub-headings p,
 .background p {
-  font-size: 1.25rem;
+  font-size: 1.5rem;
 }
 .review-sub-headings {
   position: relative;
@@ -110,7 +110,7 @@
 
 .review-text p {
   text-align: left;
-  font-size: 1.25rem;
+  font-size: 1.5rem;
   font-weight: 500;
 }
 
@@ -122,8 +122,13 @@
     flex-direction: column;
   }
 
+  .review-sub-headings p,
+  .background p {
+    font-size: 1.25rem;
+  }
+
   .review-text p {
     text-align: left;
-    font-size: 1.05rem;
+    font-size: 1.25rem;
   }
 }

@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 const linkHover = {
   color: "var(--white)",
+  textDecoration: "underline",
   transition: { duration: 0.25, ease: [0.65, 0, 0.35, 1] },
 };
 const Contact = () => {

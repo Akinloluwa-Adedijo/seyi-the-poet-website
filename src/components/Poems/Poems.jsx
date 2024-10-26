@@ -110,7 +110,7 @@ const poems = [
   },
 ];
 
-const landingVariants = {
+const poemOpacityvariants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
@@ -120,21 +120,21 @@ const landingVariants = {
     },
   },
 };
-const Poem = ({ p }) => {
-  const ref = useRef();
-  const inview = useInView(ref);
+const Poem = ({ poem }) => {
+  const poemRef = useRef();
+  const poemInView = useInView(poemRef);
   return (
     <motion.div
-      ref={ref}
-      variants={landingVariants}
-      animate={inview ? "visible" : "hidden"}
+      ref={poemRef}
+      variants={poemOpacityvariants}
+      animate={poemInView ? "visible" : "hidden"}
       className="poem"
     >
       <div className="poem-title">
-        <p>{p.title}</p>
+        <p>{poem.title}</p>
       </div>
       <div className="poem-text">
-        {p.lines.map((par, index) => {
+        {poem.lines.map((par, index) => {
           return <p key={index}>{par}</p>;
         })}
       </div>
@@ -150,8 +150,8 @@ const Poems = () => {
           <h2>Poems</h2>
         </div>
         <div className="poems">
-          {poems.map((p, index) => {
-            return <Poem p={p} key={index} />;
+          {poems.map((poem, index) => {
+            return <Poem poem={poem} key={index} />;
           })}
         </div>
       </div>
