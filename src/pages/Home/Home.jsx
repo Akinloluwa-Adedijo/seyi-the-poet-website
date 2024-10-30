@@ -107,7 +107,7 @@ const recentsData = [
   },
   {
     id: 2,
-    title: "Seyi Synth 5k",
+    title: "Sèyí Synth 5k",
     text: "Synth made with Max MSP",
     images: ["/src/assets/recent_images/synth.webp"],
   },
@@ -131,8 +131,8 @@ const Recent = ({ r }) => {
         <p>{r.text}</p>
       </div>
       <div className="recent-images">
-        {r.images.map((im) => {
-          return <img src={im} alt={r.title} />;
+        {r.images.map((im, index) => {
+          return <img src={im} key={index} alt={r.title} />;
         })}
       </div>
     </div>
@@ -152,8 +152,8 @@ const Recents = () => {
           Recents
         </motion.h2>
       </div>
-      {recentsData.map((r) => {
-        return <Recent r={r} />;
+      {recentsData.map((r, index) => {
+        return <Recent r={r} key={index} />;
       })}
     </div>
   );
