@@ -2,11 +2,11 @@ import Transition from "../../components/Transition/Transition";
 import "./music.css";
 import { motion } from "framer-motion";
 const musicImages = [
-  { src: "/src/assets/music_images/fwut-1.webp" },
-  { src: "/src/assets/music_images/fwut-2.webp" },
-  { src: "/src/assets/music_images/fwut-3.webp" },
-  { src: "/src/assets/music_images/fwut-4.webp" },
-  { src: "/src/assets/music_images/fwut-5.webp" },
+  { src: "/images/music_images/fwut-1.webp" },
+  { src: "/images/music_images/fwut-2.webp" },
+  { src: "/images/music_images/fwut-3.webp" },
+  { src: "/images/music_images/fwut-4.webp" },
+  { src: "/images/music_images/fwut-5.webp" },
 ];
 
 const landingVariants = {

@@ -16,7 +16,7 @@ const Navbar = () => {
               rotate: 360,
               transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
             }}
-            src="/src/assets/logo.png"
+            src="/logo.png"
             alt="logo image"
           />
           {/* <p>Sèyí,ThePoet</p> */}

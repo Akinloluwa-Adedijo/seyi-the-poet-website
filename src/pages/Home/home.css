@@ -150,7 +150,7 @@
 @media screen and (min-width: 700px) {
   .recent-text {
     position: sticky;
-    top: 50px;
+    top: 100px;
   }
 }
 

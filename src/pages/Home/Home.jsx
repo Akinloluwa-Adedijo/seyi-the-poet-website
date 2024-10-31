@@ -99,27 +99,27 @@ const recentsData = [
     title: "PERFORMANCE AT TALK WITH SOSA: A MENTAL HEALTH CONFERENCE",
     text: "Performing for this event meant a lot to me as i have also struggled  with mental health issues in the past. I was extremly honoured to play  my piece “I love you,” a tale of two lovers in a toxic cylce, “if my  bottle could talk”, a poem about alcholism, “lost”, a poem about the  troubles finiding yourself in a new enovironment as an international  student.",
     images: [
-      "/src/assets/recent_images/performance_talk_with_sosa_1.webp",
-      "/src/assets/recent_images/performance_talk_with_sosa_2.webp",
-      "/src/assets/recent_images/performance_talk_with_sosa_3.webp",
-      "/src/assets/recent_images/performance_talk_with_sosa_4.webp",
+      "/images/recent_images/performance_talk_with_sosa_1.webp",
+      "/images/recent_images/performance_talk_with_sosa_2.webp",
+      "/images/recent_images/performance_talk_with_sosa_3.webp",
+      "/images/recent_images/performance_talk_with_sosa_4.webp",
     ],
   },
   {
     id: 2,
     title: "Sèyí Synth 5k",
     text: "Synth made with Max MSP",
-    images: ["/src/assets/recent_images/synth.webp"],
+    images: ["/images/recent_images/synth.webp"],
   },
   {
     id: 3,
     title: "UPCOMING ALBUM: OLUWASEYI, THE PROTAGONIST",
     text: "",
     images: [
-      "/src/assets/recent_images/album_1.webp",
-      "/src/assets/recent_images/album_2.webp",
-      "/src/assets/recent_images/album_3.webp",
-      "/src/assets/recent_images/album_4.webp",
+      "/images/recent_images/album_1.webp",
+      "/images/recent_images/album_2.webp",
+      "/images/recent_images/album_3.webp",
+      "/images/recent_images/album_4.webp",
     ],
   },
 ];
@@ -169,7 +169,7 @@ const Home = () => {
           animate="visible"
           initial="hidden"
         >
-          <img src="/src/assets/title.svg" alt="Sèyí,ThePoet TITLE TEXT" />
+          <img src="home_landing_text.svg" alt="Sèyí,ThePoet TITLE TEXT" />
         </motion.div>
 
         <motion.div
@@ -178,7 +178,7 @@ const Home = () => {
           initial="hidden"
           className="landing-image"
         >
-          <img src="/src/assets/home.webp" alt="landing image" />
+          <img src="/images/home_images/home.webp" alt="landing image" />
         </motion.div>
       </div>
       <About />

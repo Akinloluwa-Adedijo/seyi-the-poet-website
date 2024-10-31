@@ -10,7 +10,7 @@ const reviews = [
     released: "2024",
     details: [
       {
-        src: "/src/assets/review_images/review-1.webp",
+        src: "/images/review_images/review-1.webp",
         p1: "Rema has returned with an album that not only cements his place at the top of the new wave of Afrobeats artists but also showcases his unique artistry and bold creativity. From the outset, Rema’s mission is to demonstrate his dominance and versatility within the genre.",
         p2: "The album kicks off with an intensity that is hard to ignore. Rema bursts out of the gates with the energy of a sprinter, setting a pace that is relentless, only easing up near the very end. His choice of beats is as polarizing as it is innovative, with tracks that weave between ethereal vocal deliveries and sharply crafted songwriting. Rema doesn’t just want to be heard—he demands it, asserting his presence as if to say, “I am HIM.” The confidence is palpable and unapologetic.",
         p3: "On the track 'Hehehehe,', Rema repeats with conviction that he 'isn’t going to take it on his hater,' a statement that feels both like a mantra and a warning. Following this, 'Yayo' showcases Rema’s vocal agility and his ability to find unique rhythmic pockets within the music. Here, he boasts of his success—money, hits, women, and cars—delivering each line with a flair that’s almost theatrical.",

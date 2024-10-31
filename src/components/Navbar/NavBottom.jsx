@@ -7,31 +7,31 @@ import { height } from "../animationVariants";
 import "./navBottom.css";
 
 const navLinks = [
-  { title: "Home", href: "/", src: "../../../src/assets/nav_images/home.webp" },
+  { title: "Home", href: "/", src: "/images/nav_images/home.webp" },
   {
     title: "Music",
     href: "/music",
-    src: "../../../src/assets/nav_images/music.webp",
+    src: "/images/nav_images/music.webp",
   },
   {
     title: "Reviews",
     href: "/music-reviews",
-    src: "../../../src/assets/nav_images/music-reviews.webp",
+    src: "/images/assets/nav_images/music-reviews.webp",
   },
   {
     title: "Shoots",
     href: "/shoots",
-    src: "../../../src/assets/nav_images/shoots.webp",
+    src: "/images/assets/nav_images/shoots.webp",
   },
   {
     title: "Poems",
     href: "/poems",
-    src: "../../../src/assets/nav_images/poems.webp",
+    src: "/images/assets/nav_images/poems.webp",
   },
   {
     title: "Contact",
     href: "/contact",
-    src: "../../../src/assets/nav_images/contact.webp",
+    src: "/images/assets/nav_images/contact.webp",
   },
 ];
 const NavBottom = ({ isNavActive, setNavActive }) => {

@@ -7,25 +7,25 @@ const publications = [
     title1: "Daily",
     title2: "Hive",
     link: "https://dailyhive.com/canada/jimpinu-photography-black-history-month",
-    src: "/src/assets/publication_images/publication-1.webp",
+    src: "/images/publication_images/publication-1.webp",
   },
   {
     title1: "Gmaro",
     title2: "Magazine",
     link: "https://www.magcloud.com/browse/issue/2388706",
-    src: "/src/assets/publication_images/publication-2.webp",
+    src: "/images/publication_images/publication-2.webp",
   },
   {
     title1: "Pakistan",
     title2: "in Vogue",
     link: "https://pakistaninvogue.com/vancouver-fashion-week-2022/",
-    src: "/src/assets/publication_images/publication-3.webp",
+    src: "/images/publication_images/publication-3.webp",
   },
   {
     title1: "Vogue",
     title2: "Mx",
     link: "https://www.vogue.mx/moda/galeria/vancouver-fashion-week-2022-como-la-plataforma-de-disenadores-responsables",
-    src: "/src/assets/publication_images/publication-4.webp",
+    src: "/images/publication_images/publication-4.webp",
   },
 ];
 
