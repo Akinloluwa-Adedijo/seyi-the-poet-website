@@ -11,7 +11,7 @@ const NavFooter = () => {
         exit="exit"
         custom={[0.3, 0]}
       >
-        Made by: Dsign.ak
+        by: Dsign.ak
       </motion.div>
       <motion.div
         variants={translate}
