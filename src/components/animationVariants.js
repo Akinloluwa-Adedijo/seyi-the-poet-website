@@ -149,7 +149,7 @@ export const homeParagraphTextVariants = {
   },
 };
 
-// Music
+// Music & Music Reviews Page Opening
 export const landingOpacityVariants = {
   hidden: { opacity: 0 },
   visible: {
@@ -162,4 +162,26 @@ export const landingOpacityVariants = {
   },
 };
 
+// Music Reviews
+export const subHeadingsHoverVariants = {
+  initial: {
+    top: "-100%",
+  },
+  enter: {
+    top: "0%",
+    backgroundColor: "var(--secondary)",
+    color: "var(--primary)",
+    transition: { duration: 0.5, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+export const showDetailsVariants = {
+  hidden: {
+    height: 0,
+  },
+  show: {
+    height: "auto",
+    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+};
 export const mountAnim = { initial: "initial", animate: "enter", exit: "exit" };
