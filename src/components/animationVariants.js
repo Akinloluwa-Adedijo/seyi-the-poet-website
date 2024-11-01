@@ -149,4 +149,17 @@ export const homeParagraphTextVariants = {
   },
 };
 
+// Music
+export const landingOpacityVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+      duration: 2,
+      ease: [0.65, 0, 0.35, 1],
+    },
+  },
+};
+
 export const mountAnim = { initial: "initial", animate: "enter", exit: "exit" };
