@@ -103,4 +103,50 @@ export const slideUp = {
   },
 };
 
+// Home
+export const homeTitleVariants = {
+  hidden: {
+    opacity: 0,
+    x: -200,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 2, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+export const homeImageVariants = {
+  hidden: { opacity: 0, y: 100 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+export const sectionTitleVariants = {
+  hidden: { opacity: 0, x: -200 },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] },
+  },
+};
+
+export const homeParagraphTextVariants = {
+  hidden: {
+    y: "100%",
+    opacity: 0,
+  },
+  enter: {
+    y: "0%",
+    opacity: 1,
+    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+  },
+  exit: {
+    y: "100%",
+  },
+};
+
 export const mountAnim = { initial: "initial", animate: "enter", exit: "exit" };
