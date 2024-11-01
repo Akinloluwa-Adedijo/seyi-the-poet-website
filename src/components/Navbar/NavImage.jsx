@@ -9,7 +9,7 @@ const NavImage = ({ src, selectedLink }) => {
       animate={selectedLink.isActive ? "open" : "closed"}
       className="nav-image-container"
     >
-      <img src={`/src/assets/${src}`} alt="image" />
+      <img src={src} alt="image" />
     </motion.div>
   );
 };

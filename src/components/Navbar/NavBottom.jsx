@@ -16,22 +16,22 @@ const navLinks = [
   {
     title: "Reviews",
     href: "/music-reviews",
-    src: "/images/assets/nav_images/music-reviews.webp",
+    src: "/images/nav_images/music-reviews.webp",
   },
   {
     title: "Shoots",
     href: "/shoots",
-    src: "/images/assets/nav_images/shoots.webp",
+    src: "/images/nav_images/shoots.webp",
   },
   {
     title: "Poems",
     href: "/poems",
-    src: "/images/assets/nav_images/poems.webp",
+    src: "/images/nav_images/poems.webp",
   },
   {
     title: "Contact",
     href: "/contact",
-    src: "/images/assets/nav_images/contact.webp",
+    src: "/images/nav_images/contact.webp",
   },
 ];
 const NavBottom = ({ isNavActive, setNavActive }) => {
