@@ -35,7 +35,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contact-img">
-          <img src="/src/assets/music_images/fwut-3.webp" alt="Album Image" />
+          <img src="/images/music_images/fwut-3.webp" alt="Album Image" />
         </div>
       </div>
     </div>

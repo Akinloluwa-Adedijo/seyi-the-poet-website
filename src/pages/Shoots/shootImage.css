@@ -3,8 +3,10 @@
 }
 
 .shootImage {
+  /* height: 100vh; */
   margin-bottom: 100px;
   margin-top: 100px;
+  /* display: relative; */
 }
 
 .shootImage > img {
@@ -15,7 +17,7 @@
 .shootImage-title,
 .shootImage-back {
   font-weight: bold;
-  font-size: 3rem;
+  font-size: 2.5rem;
   color: var(--white);
   margin: 0;
 }

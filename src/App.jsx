@@ -10,11 +10,11 @@ import Contact from "./components/Contact/Contact";
 import Music from "./pages/Music/Music";
 import MusicReviews from "./pages/Music-Reviews/MusicReviews";
 import Poems from "./components/Poems/Poems";
-import Shoots from "./components/Shoots/Shoots";
+import Shoots from "./pages/Shoots/Shoots";
 import Navbar from "./components/Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import MainLayout from "./layouts/MainLayout";
-import ShootImage from "./components/Shoots/ShootImage";
+import ShootImage from "./pages/Shoots/ShootImage";
 
 function App() {
   const router = createBrowserRouter(
