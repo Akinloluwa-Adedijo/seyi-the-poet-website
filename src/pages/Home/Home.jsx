@@ -30,7 +30,7 @@ const Home = () => {
           initial="hidden"
           className="landing-image"
         >
-          <img src="/images/home_images/home.webp" alt="landing image" />
+          <img src="/images/home_images/home.webp" alt="Landing Image" />
         </motion.div>
       </div>
       <About />
@@ -40,20 +40,27 @@ const Home = () => {
   );
 };
 
+export const SectionTitle = ({ title, inView }) => {
+  return (
+    <motion.h2
+      className="section-title"
+      variants={sectionTitleVariants}
+      animate={inView ? "visible" : "hidden"}
+    >
+      {title}
+    </motion.h2>
+  );
+};
+
 const About = () => {
   const aboutContainerRef = useRef(null);
-  const aboutInView = useInView(aboutContainerRef);
+  const aboutInView = useInView(aboutContainerRef, { once: true });
 
   return (
     <>
       <div className="about-me" ref={aboutContainerRef}>
         <div className="about-title">
-          <motion.h2
-            variants={sectionTitleVariants}
-            animate={aboutInView ? "visible" : "hidden"}
-          >
-            ABOUT ME
-          </motion.h2>
+          <SectionTitle title={"About"} inView={aboutInView} />
         </div>
         <div className="about-body">
           {aboutData.map((word, index) => {
@@ -72,7 +79,7 @@ const About = () => {
 };
 
 const ParagraphText = ({ word, parentRef }) => {
-  const paragraphInView = useInView(parentRef);
+  const paragraphInView = useInView(parentRef, { once: true });
 
   return (
     <div>
@@ -89,17 +96,12 @@ const ParagraphText = ({ word, parentRef }) => {
 
 const Recents = () => {
   const recentsRef = useRef();
-  const recentInView = useInView(recentsRef);
+  const recentInView = useInView(recentsRef, { once: true });
 
   return (
     <div className="recents-container" ref={recentsRef}>
       <div className="recents-title">
-        <motion.h2
-          variants={sectionTitleVariants}
-          animate={recentInView ? "visible" : "hidden"}
-        >
-          Recents
-        </motion.h2>
+        <SectionTitle title={"Recents"} inView={recentInView} />
       </div>
       {recentsData.map((r, index) => {
         return <Recent r={r} key={index} />;
@@ -109,12 +111,20 @@ const Recents = () => {
 };
 
 const Recent = ({ r }) => {
+  const rRef = useRef();
+  const rInView = useInView(rRef, { once: true });
+
   return (
-    <div className="recent" key={r.id}>
-      <div className="recent-text">
+    <div className="recent" key={r.id} ref={rRef}>
+      <motion.div
+        variants={homeParagraphTextVariants}
+        initial="hidden"
+        animate={rInView ? "enter" : "exit"}
+        className="recent-text"
+      >
         <h3>{r.title}</h3>
         <p>{r.text}</p>
-      </div>
+      </motion.div>
       <div className="recent-images">
         {r.images.map((im, index) => {
           return <img src={im} key={index} alt={r.title} />;

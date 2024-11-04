@@ -45,14 +45,16 @@
   gap: 2rem;
 }
 
-.about-title {
+.about-title,
+.recents-title {
   align-self: flex-start;
 }
 
-.about-title h2 {
+.section-title {
   margin: 0;
   font-size: 5vw;
   font-weight: 900;
+  text-transform: uppercase;
 }
 
 .about-body {
@@ -70,7 +72,6 @@
   text-align: left;
   color: var(--secondary);
   font-size: 1.5rem;
-  font-weight: 500;
   gap: 8px;
 }
 
@@ -82,16 +83,6 @@
   overflow: visible;
 }
 
-.recents-title {
-  align-self: flex-start;
-}
-
-.recents-title h2 {
-  margin: 0;
-  font-size: 5vw;
-  font-weight: 900;
-  text-transform: uppercase;
-}
 .recent {
   display: flex;
   align-items: start;
@@ -115,15 +106,13 @@
 
 .recent-text p {
   margin: 0;
-  max-width: 500px;
-  min-width: 320px;
-  font-size: 1.25rem;
+  max-width: 600px;
+  min-width: 350px;
+  font-size: 1.5rem;
   text-align: left;
-  font-weight: 400;
 }
 
 .recent-images {
-  /* width: 350px; */
   width: 70%;
   max-width: 700px;
   display: flex;
@@ -148,7 +137,7 @@
 
 @media screen and (max-width: 600px) {
   .about-body p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 
   .landing-page {
@@ -174,6 +163,6 @@
   }
 
   .recent-text p {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
   }
 }

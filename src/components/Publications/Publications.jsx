@@ -1,5 +1,6 @@
 import React, { useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
+import { SectionTitle } from "../../pages/Home/Home";
 import "./publications.css";
 
 const publications = [
@@ -58,7 +59,7 @@ const lineVariants = {
 const Publication = ({ data }) => {
   const [isActive, setIsActive] = useState(false);
   const pubRef = useRef();
-  const pubInView = useInView(pubRef);
+  const pubInView = useInView(pubRef, { once: true });
 
   const { title1, title2, link, src } = data;
   return (
@@ -95,17 +96,12 @@ const Publication = ({ data }) => {
 };
 const Publications = () => {
   const pubGalleryRef = useRef();
-  const pubGalleryInView = useInView(pubGalleryRef);
+  const pubGalleryInView = useInView(pubGalleryRef, { once: true });
   return (
     <div className="publication-container">
       <div className="publication-gallery" ref={pubGalleryRef}>
         <div className="publication-heading">
-          <motion.h2
-            variants={sectionTitleVariants}
-            animate={pubGalleryInView ? "visible" : "hidden"}
-          >
-            Publications
-          </motion.h2>
+          <SectionTitle title={"Publications"} inView={pubGalleryInView} />
         </div>
 
         {publications.map((data, index) => {
