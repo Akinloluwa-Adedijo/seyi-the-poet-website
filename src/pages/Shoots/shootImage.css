@@ -1,12 +1,17 @@
 .shootImage-container {
   padding: 1rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
 }
 
 .shootImage {
   /* height: 100vh; */
-  margin-bottom: 50px;
-  margin-top: 75px;
-  position: relative;
+  /* margin-bottom: 50px; */
+  /* margin-top: 75px; */
 }
 
 .shootImage > img {
@@ -24,13 +29,11 @@
 
 .shootImage-title {
   position: absolute;
-  bottom: -50px;
+  /* bottom: -50px; */
+  bottom: 10px;
 }
 
 .shootImage-back {
   position: absolute;
   text-transform: uppercase;
-}
-
-@media screen and (max-width: 600px) {
 }
