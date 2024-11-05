@@ -76,4 +76,8 @@
   .publication-gallery h2 {
     font-size: 2.5rem;
   }
+
+  .publication-image-container img {
+    display: none;
+  }
 }

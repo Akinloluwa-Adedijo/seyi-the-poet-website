@@ -4,9 +4,9 @@
 
 .shootImage {
   /* height: 100vh; */
-  margin-bottom: 100px;
-  margin-top: 100px;
-  /* display: relative; */
+  margin-bottom: 50px;
+  margin-top: 75px;
+  position: relative;
 }
 
 .shootImage > img {
@@ -17,18 +17,20 @@
 .shootImage-title,
 .shootImage-back {
   font-weight: bold;
-  font-size: 2.5rem;
+  font-size: 1.5rem;
   color: var(--white);
   margin: 0;
 }
 
 .shootImage-title {
   position: absolute;
-  bottom: 1rem;
-  right: 1rem;
+  bottom: -50px;
 }
 
 .shootImage-back {
   position: absolute;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
 }
