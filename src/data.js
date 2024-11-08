@@ -46,7 +46,7 @@ export const musicImages = [
 export const reviews = [
   {
     id: 1,
-    album_name: "Heis.",
+    album_name: "Heis",
     artist: "Rema",
     released: "2024",
     details: [
@@ -60,6 +60,25 @@ export const reviews = [
         p6: "If there’s one critique, it’s the album’s relentless pace. The high BPM and non-stop energy can be overwhelming, with the only reprieve coming in the form of the final two tracks. However, even this ties into the overall concept, creating a listening experience that is as exhausting as it is exhilarating.",
         p7: "In the end, this album isn’t just a collection of songs—it’s a statement. It’s Rema proving a point, and doing so with a style and bravado that is uniquely his.",
         conclusion: "So, to wrap it up: “Siri, play me OZEBA jaare.”",
+      },
+    ],
+  },
+  {
+    id: 2,
+    album_name: "Lungu Boy",
+    artist: "Asake",
+    released: "2024",
+    details: [
+      {
+        src: "/images/review_images/review-2.webp",
+        p1: "Lungu Boy to Space: A Poetry Album Review on Lungu Boys.",
+        p2: "On Asake’s second work of art, We take a dive into the mind of the lungu boy himself, Swimming through his mother’s words on patience, backstroking through his struggles in his early stage of his career and belly flopping into his love for skating.",
+        p3: "Asake doesn’t fail to take the listener on a serious aquatic lesson. Some essentials include life jacket synthesizers and live “swimsuit” instrumentals.",
+        p4: "Can’t help but mention life guards Sarz and Pprime Ensuring our safety as we breaststroke through the famous “my heart”, the notorious sea called “wave” and the breath taking ocean “worldwide” Oh my! Their production could sink the titanic !",
+        p5: "During my lesson central cee instilled in me the dangers of riding a wave alone at sea Stormzy seems to be alright with it, his only advice to me was to be patient.",
+        p6: "LUDMILLA, whines about the sharks notorious essence.",
+        p7: "The class ends with a delicacy We had the bass and choir entry at the 18 second mark on “Worldwide” The maxing guitar intro on “My heart” And the ethereal synth on “Wave”",
+        conclusion: "A delicious feast to say the least 8/10",
       },
     ],
   },
@@ -78,7 +97,7 @@ export const shootImages = [
     link_title: "/shoots/shoot2-vfw-23-blue-tamburin",
     src: "/images/shoot_images/2.webp",
     title: "VFW SS'23 - BLUE TAMBURIN",
-    color: "#00FFC5",
+    color: "#07D9A8",
   },
   {
     id: 3,

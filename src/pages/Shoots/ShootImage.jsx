@@ -13,12 +13,14 @@ const ShootImage = () => {
       className="shootImage-container"
       style={{ backgroundColor: `${shootImg.color}` }}
     >
-      <div className="shootImage">
+      <div>
         <Link to="/shoots">
           <p className="shootImage-back">Back</p>
         </Link>
+        <div className="shoot">
+          <img src={shootImg.src} alt={shootImg.title} />
+        </div>
         <p className="shootImage-title">{shootImg.title}</p>
-        <img src={shootImg.src} alt={shootImg.title} />
       </div>
     </div>
   );

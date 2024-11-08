@@ -8,15 +8,9 @@
   z-index: 100;
 }
 
-.shootImage {
-  /* height: 100vh; */
-  /* margin-bottom: 50px; */
-  /* margin-top: 75px; */
-}
-
-.shootImage > img {
+.shoot img {
   max-height: calc(100vh - 40px);
-  max-width: 80vw;
+  max-width: 90vw;
 }
 
 .shootImage-title,
@@ -29,11 +23,18 @@
 
 .shootImage-title {
   position: absolute;
-  /* bottom: -50px; */
   bottom: 10px;
+  text-align: left;
 }
 
 .shootImage-back {
   position: absolute;
   text-transform: uppercase;
+}
+
+@media screen and (max-width: 600px) {
+  .shoot {
+    position: absolute;
+    top: 50px;
+  }
 }

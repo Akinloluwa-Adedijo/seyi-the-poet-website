@@ -25,13 +25,13 @@ const Review = ({ review, isActive, setActiveProject, index }) => {
           variants={subHeadingsHoverVariants}
           animate={hoverActive ? "enter" : "initial"}
         >
+          <p>{review.artist}</p>
           <p>{review.album_name}</p>
           <p>{review.released}</p>
-          <p>{review.artist}</p>
         </motion.div>
+        <p>{review.artist}</p>
         <p>{review.album_name}</p>
         <p>{review.released}</p>
-        <p>{review.artist}</p>
       </div>
       {isActive === index && (
         <motion.div
@@ -79,9 +79,9 @@ const MusicReviews = () => {
           <h2>Music reviews</h2>
         </div>
         <div className="review-headings">
+          <p>Artist</p>
           <p>Album</p>
           <p>Year</p>
-          <p>Artist</p>
         </div>
         {reviews.map((review, index) => {
           return (

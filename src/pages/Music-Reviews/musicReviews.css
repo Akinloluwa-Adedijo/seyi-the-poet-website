@@ -106,7 +106,7 @@
   max-width: 1200px;
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .review-text p {
