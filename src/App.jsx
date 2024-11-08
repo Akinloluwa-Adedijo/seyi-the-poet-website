@@ -15,6 +15,7 @@ import Navbar from "./components/Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import MainLayout from "./layouts/MainLayout";
 import ShootImage from "./pages/Shoots/ShootImage";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const router = createBrowserRouter(
@@ -30,6 +31,7 @@ function App() {
       </Route>
     )
   );
+
   return (
     <AnimatePresence mode="wait">
       <RouterProvider router={router} />
