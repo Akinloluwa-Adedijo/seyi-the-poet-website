@@ -19,7 +19,6 @@ const Navbar = () => {
             src="/logo.png"
             alt="logo image"
           />
-          {/* <p>Sèyí,ThePoet</p> */}
         </div>
         <div
           onClick={() => {

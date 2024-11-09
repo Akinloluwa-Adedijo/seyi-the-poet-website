@@ -10,8 +10,6 @@ const NavBody = ({
   _isNavActive,
   _setNavActive,
 }) => {
-  // console.log(_isNavActive);
-
   const toggle = () => _setNavActive(!_isNavActive);
   const getChars = (word) => {
     let chars = [];

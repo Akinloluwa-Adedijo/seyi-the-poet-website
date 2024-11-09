@@ -1,3 +1,32 @@
+export const navLinks = [
+  { title: "Home", href: "/", src: "/images/nav_images/home.webp" },
+  {
+    title: "Music",
+    href: "/music",
+    src: "/images/nav_images/music.webp",
+  },
+  {
+    title: "Reviews",
+    href: "/music-reviews",
+    src: "/images/nav_images/music-reviews.webp",
+  },
+  {
+    title: "Shoots",
+    href: "/shoots",
+    src: "/images/nav_images/shoots.webp",
+  },
+  {
+    title: "Poems",
+    href: "/poems",
+    src: "/images/nav_images/poems.webp",
+  },
+  {
+    title: "Contact",
+    href: "/contact",
+    src: "/images/nav_images/contact.webp",
+  },
+];
+
 export const aboutData = [
   "Șèyí,ThePoet is a passionate spoken word artist, model and creative director; who brings raw emotion and profound insight to the stage. His performances, rich with themes of mental health and the human experience, have touched hearts and sparked conversations. Notable highlights of his career include a moving performance at the SFU Black Caucus Graduation, winning second place at the highly regarded Da Luv Jones Slam Competition being featured in Vogue Mexico and Pakistan, GMARO magazine and creative directing ‘STACKED’ -  a new sustainable fashion runway in Vancouver, BC.",
   "Balancing his artistic pursuits with academic endeavors, Șèyí,ThePoet is studying Music and honing his technical skills as an Audio Tech intern at Lobe Studios - the first dedicated spatial sound studio in North America to work with a permanently integrated 4DSOUND system. This combination of creativity and technical expertise allows him to craft performances that are both emotionally powerful and sonically refined. Șèyí,ThePoet is also a proud Grammy U Member of the LA Chapter.",

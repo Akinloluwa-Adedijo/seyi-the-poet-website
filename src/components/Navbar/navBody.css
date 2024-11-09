@@ -31,3 +31,9 @@
     padding-right: 2vw;
   }
 }
+
+@media screen and (max-width: 600px) {
+  .nav-body {
+    flex-direction: column;
+  }
+}
