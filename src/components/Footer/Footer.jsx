@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React from "react";
 import "./footer.css";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 
 const linkHover = {
   color: "var(--white)",
@@ -74,12 +74,10 @@ const Content = () => {
 };
 
 const Footer = () => {
-  const ref = useRef();
-  const inView = useInView(ref);
   return (
-    <div className="footer-container">
-      <div className="footer" ref={ref}>
-        <Content view={inView} />
+    <div>
+      <div className="footer">
+        <Content />
       </div>
     </div>
   );

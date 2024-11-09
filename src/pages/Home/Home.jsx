@@ -10,8 +10,10 @@ import {
   sectionTitleVariants,
   homeParagraphTextVariants,
 } from "../../components/animationVariants";
+import useDocumentTitle from "../../components/useDocumentTitle";
 
 const Home = () => {
+  useDocumentTitle("Artist - Sèyí,ThePoet");
   return (
     <div className="home">
       <div className="landing-page">

@@ -8,8 +8,11 @@ import {
   subHeadingsHoverVariants,
   showDetailsVariants,
 } from "../../components/animationVariants";
+import useDocumentTitle from "../../components/useDocumentTitle";
 
 const Review = ({ review, isActive, setActiveProject, index }) => {
+  useDocumentTitle("Music Reviews - Sèyí,ThePoet");
+
   const [hoverActive, setHoverActive] = useState(false);
 
   return (

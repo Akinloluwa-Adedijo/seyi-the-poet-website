@@ -3,6 +3,7 @@ import "./music.css";
 import { motion } from "framer-motion";
 import { musicImages } from "../../data";
 import { landingOpacityVariants } from "../../components/animationVariants";
+import useDocumentTitle from "../../components/useDocumentTitle";
 const Song = ({ link }) => {
   return (
     <div className="song">
@@ -11,6 +12,8 @@ const Song = ({ link }) => {
   );
 };
 const Music = () => {
+  useDocumentTitle("Music - Sèyí,ThePoet");
+
   return (
     <div className="music-container">
       <div className="music-content">

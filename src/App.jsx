@@ -6,10 +6,10 @@ import {
 } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/Home/Home";
-import Contact from "./components/Contact/Contact";
+import Contact from "./pages/Contact/Contact";
 import Music from "./pages/Music/Music";
 import MusicReviews from "./pages/Music-Reviews/MusicReviews";
-import Poems from "./components/Poems/Poems";
+import Poems from "./pages/Poems/Poems";
 import Shoots from "./pages/Shoots/Shoots";
 import Navbar from "./components/Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";

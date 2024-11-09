@@ -3,10 +3,13 @@ import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 import "./shootImage.css";
+import useDocumentTitle from "../../components/useDocumentTitle";
 
 const ShootImage = () => {
   const location = useLocation();
   const shootImg = location.state;
+
+  useDocumentTitle(`${shootImg.title} - Sèyí,ThePoet`);
 
   return (
     <div

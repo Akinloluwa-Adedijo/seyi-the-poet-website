@@ -6,8 +6,11 @@ import { motion, useInView } from "framer-motion";
 import { Link } from "react-router-dom";
 import { shootImages } from "../../data";
 import { shootImageCoverVariants } from "../../components/animationVariants";
+import useDocumentTitle from "../../components/useDocumentTitle";
 
 const Shoot = ({ img }) => {
+  useDocumentTitle("Shoots - Sèyí,ThePoet");
+
   const shootRef = useRef(null);
   const shootInView = useInView(shootRef);
 
