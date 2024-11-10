@@ -15,11 +15,12 @@ import Navbar from "./components/Navbar/Navbar";
 import { AnimatePresence } from "framer-motion";
 import MainLayout from "./layouts/MainLayout";
 import ShootImage from "./pages/Shoots/ShootImage";
+import Error from "./pages/Error/Error";
 
 function App() {
   const router = createBrowserRouter(
     createRoutesFromElements(
-      <Route path="/" element={<MainLayout />}>
+      <Route path="/" element={<MainLayout />} errorElement={<Error />}>
         <Route index element={<Home />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/music" element={<Music />} />

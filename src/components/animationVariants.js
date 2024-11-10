@@ -187,10 +187,12 @@ export const showDetailsVariants = {
 
 // Shoots
 export const shootImageCoverVariants = {
-  hidden: { y: 0 },
+  hidden: {
+    y: 0,
+  },
   visible: {
     y: -1000,
-    transition: { delay: 0.25, duration: 2, ease: [0.65, 0, 0.35, 1] },
+    transition: { delay: 0.5, duration: 2, ease: [0.65, 0, 0.35, 1] },
   },
 };
 

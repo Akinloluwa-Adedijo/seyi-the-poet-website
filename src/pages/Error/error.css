@@ -1,0 +1,28 @@
+.error-container {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.error-title {
+  text-transform: uppercase;
+  min-width: 250px;
+}
+
+.error-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 150px;
+  height: 50px;
+  background-color: var(--secondary);
+  color: var(--primary);
+  border-radius: 1rem;
+}
+
+.error-container a {
+  text-decoration: none;
+}
