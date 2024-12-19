@@ -6,8 +6,9 @@
   .nav-image-container {
     display: block;
     width: 500px;
-    height: 350px;
+    height: 500px;
     position: relative;
+    align-self: end;
   }
 
   .nav-image-container img {
