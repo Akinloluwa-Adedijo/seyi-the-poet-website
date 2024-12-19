@@ -7,7 +7,7 @@
   flex-direction: column;
   padding-top: 100px;
   /* height: 100vh; */
-  margin-bottom: 5rem;
+  margin-bottom: 20rem;
 }
 
 .review-title,
@@ -43,6 +43,7 @@
 
 .review-sub-headings {
   padding: 0.5rem 0.5rem 0.5rem 0;
+  /* padding: 0.5rem; */
 }
 
 .review-sub-headings p,
@@ -67,6 +68,7 @@
   justify-content: space-between;
   align-items: start;
   gap: 1rem;
+  padding-bottom: 3rem;
 }
 
 .review-image {

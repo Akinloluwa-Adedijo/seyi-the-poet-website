@@ -177,11 +177,17 @@ export const subHeadingsHoverVariants = {
 
 export const showDetailsVariants = {
   hidden: {
-    height: 0,
+    height: "0",
   },
   show: {
     height: "auto",
-    transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    // transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 1, ease: [0.12, 0, 0.39, 0] },
+  },
+  exit: {
+    height: "0px",
+    // transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+    transition: { duration: 0.75, ease: [0.12, 0, 0.39, 0] },
   },
 };
 

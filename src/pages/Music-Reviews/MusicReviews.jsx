@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import Transition from "../../components/Transition/Transition";
 import "./musicReviews.css";
 import { reviews } from "../../data";
@@ -27,6 +27,7 @@ const Review = ({ review, isActive, setActiveProject, index }) => {
           className="sub-headings-hover"
           variants={subHeadingsHoverVariants}
           animate={hoverActive ? "enter" : "initial"}
+          style={{ paddingRight: "0.5rem" }}
         >
           <p>{review.artist}</p>
           <p>{review.album_name}</p>
@@ -36,30 +37,35 @@ const Review = ({ review, isActive, setActiveProject, index }) => {
         <p>{review.album_name}</p>
         <p>{review.released}</p>
       </div>
-      {isActive === index && (
-        <motion.div
-          className="review-details"
-          variants={showDetailsVariants}
-          initial="hidden"
-          animate="show"
-        >
-          <div className="review-image">
-            <img src={review.details[0].src} alt="Album Artwork" />
-          </div>
-          <div className="review-text">
-            <p>{review.details[0].p1}</p>
-            <p>{review.details[0].p2}</p>
-            <p>{review.details[0].p3}</p>
-            <p>{review.details[0].p4}</p>
-            <p>{review.details[0].p5}</p>
-            <p>{review.details[0].p6}</p>
-            <p>{review.details[0].p7}</p>
-            <p>{review.details[0].p8}</p>
-            <p>{review.details[0].p9}</p>
-            <p style={{ fontWeight: "bold" }}>{review.details[0].conclusion}</p>
-          </div>
-        </motion.div>
-      )}
+      <AnimatePresence mode="wait">
+        {isActive === index && (
+          <motion.div
+            className="review-details"
+            variants={showDetailsVariants}
+            initial="hidden"
+            animate="show"
+            exit="exit"
+          >
+            <div className="review-image">
+              <img src={review.details[0].src} alt="Album Artwork" />
+            </div>
+            <div className="review-text">
+              <p>{review.details[0].p1}</p>
+              <p>{review.details[0].p2}</p>
+              <p>{review.details[0].p3}</p>
+              <p>{review.details[0].p4}</p>
+              <p>{review.details[0].p5}</p>
+              <p>{review.details[0].p6}</p>
+              <p>{review.details[0].p7}</p>
+              <p>{review.details[0].p8}</p>
+              <p>{review.details[0].p9}</p>
+              <p style={{ fontWeight: "bold" }}>
+                {review.details[0].conclusion}
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 };
