@@ -58,7 +58,7 @@ const Section2 = () => {
     <motion.div className="section2-container">
       <h2>Sèyí,ThePoet</h2>
 
-      <p>Made by : DSIGN.AK</p>
+      {/* <p>Made by : DSIGN.AK</p> */}
       <p>©2024</p>
     </motion.div>
   );

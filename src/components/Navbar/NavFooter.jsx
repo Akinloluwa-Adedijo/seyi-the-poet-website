@@ -4,7 +4,7 @@ import "./navFooter.css";
 const NavFooter = () => {
   return (
     <div className="nav-footer">
-      <motion.div
+      {/* <motion.div
         variants={translate}
         animate="enter"
         initial="initial"
@@ -12,7 +12,7 @@ const NavFooter = () => {
         custom={[0.3, 0]}
       >
         Made by: Dsign.ak
-      </motion.div>
+      </motion.div> */}
       <motion.div
         variants={translate}
         animate="enter"
