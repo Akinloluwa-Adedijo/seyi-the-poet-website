@@ -4,6 +4,11 @@ import { opacity, navBackground, transitionSlide } from "../animationVariants";
 import "./navbar.css";
 import NavBottom from "./NavBottom";
 
+const linkHover = {
+  color: "var(--white)",
+  transition: { duration: 0.25, ease: [0.65, 0, 0.35, 1] },
+};
+
 const Navbar = () => {
   const [isActive, setIsActive] = useState(false);
 
@@ -20,18 +25,32 @@ const Navbar = () => {
             alt="logo image"
           />
         </div>
-        <div
-          onClick={() => {
-            setIsActive(!isActive);
-          }}
-          className="nav-menu-btn"
-        >
-          <motion.p variants={opacity} animate={!isActive ? "open" : "closed"}>
-            Menu
-          </motion.p>
-          <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
-            Close
-          </motion.p>
+        <div className="nav-menu-news-container">
+          <div className="nav-news">
+            <motion.a
+              whileHover={linkHover}
+              href="https://seyithepoet.kit.com/93eaf20fa5"
+              target="_blank"
+            >
+              Newsletter
+            </motion.a>
+          </div>
+          <div
+            onClick={() => {
+              setIsActive(!isActive);
+            }}
+            className="nav-menu-btn"
+          >
+            <motion.p
+              variants={opacity}
+              animate={!isActive ? "open" : "closed"}
+            >
+              Menu
+            </motion.p>
+            <motion.p variants={opacity} animate={isActive ? "open" : "closed"}>
+              Close
+            </motion.p>
+          </div>
         </div>
       </div>
       <AnimatePresence mode="wait">

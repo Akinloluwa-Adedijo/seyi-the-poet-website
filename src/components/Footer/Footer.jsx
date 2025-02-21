@@ -6,6 +6,20 @@ const linkHover = {
   color: "var(--white)",
   transition: { duration: 0.25, ease: [0.65, 0, 0.35, 1] },
 };
+
+const NewsletterBlock = () => {
+  return (
+    <div>
+      {/* <motion.a
+        whileHover={linkHover}
+        href="https://seyithepoet.kit.com/93eaf20fa5"
+        target="_blank"
+      >
+        Newsletter
+      </motion.a> */}
+    </div>
+  );
+};
 const Section1 = () => {
   return (
     <div className="section1-container">
@@ -50,6 +64,7 @@ const Section1 = () => {
           Youtube
         </motion.a>
       </div>
+      <NewsletterBlock />
     </div>
   );
 };

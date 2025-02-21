@@ -48,3 +48,16 @@
   left: 0;
   top: 100%;
 }
+
+.nav-menu-news-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* width: 200px; */
+  gap: 24px;
+}
+
+.nav-news a {
+  text-decoration: none;
+  color: var(--primary);
+}
